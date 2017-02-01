@@ -20,5 +20,4 @@ $(document).ready(function(){
 		$("#signInModal").modal('hide');
 		$("#mdpOubModal").modal();
 	});
-
 });
