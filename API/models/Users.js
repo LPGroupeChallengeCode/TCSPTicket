@@ -10,7 +10,12 @@ var UserSchema = new mongoose.Schema({
 	password: String,
 	firstName: String,
 	commandes : [{
-		tickets : 
+		tickets : [
+		type : mongoose.Schema.Types.ObjectId,
+		ref : 'Tickets'
+		],
+		total : String,
+		date : Date,
 	}]
 });
 
