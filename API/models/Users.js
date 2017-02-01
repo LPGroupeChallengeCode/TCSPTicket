@@ -11,11 +11,14 @@ var UserSchema = new mongoose.Schema({
 	firstName: String,
 	commandes : [{
 		tickets : [
-		type : mongoose.Schema.Types.ObjectId,
-		ref : 'Tickets'
+			type : mongoose.Schema.Types.ObjectId,
+			ref : 'Tickets'
 		],
 		total : String,
-		date : Date,
+		date : {
+			type : Date,
+			default : Date.now
+		}
 	}]
 });
 
