@@ -12,7 +12,9 @@
 var express    = require('express');        // call express
 var bodyParser = require('body-parser');
 var md5        = require('md5');
-var passport   = require('passport');
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+var paypal     = require('paypal-rest-sdk');
 //var mongoose = require('mongoose');
 //require('./models/Users');
 //require('./models/Tickets');
@@ -58,4 +60,4 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Magic happens on port ' + port);
+console.log('Api working on port ' + port);
