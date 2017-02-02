@@ -44,18 +44,17 @@ router.use(function(req, res, next) {
 });
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/', function(req, res) {
+/*router.get('/', function(req, res) {
     res.json({ message: 'api working' });   
-});
+});*/
 
 // more routes for our API will happen here
-
-
+require('./routes')(app); //va chercher les routes dans le dossier routes
 
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/api', router);
+//app.use('/api', router);
 
 // START THE SERVER
 // =============================================================================
