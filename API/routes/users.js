@@ -14,22 +14,23 @@ module.exports = function(app) {
 
 	db.User.findOne(
 		{mail: req.body.mail},
-		{password: req.body.password})
+		{password: req.body.password}) //il manque ,function (err, user) et c'est dans cette fonction qu'on verifie si il a un user.
+		//si il y en a un, le rediriger vers son profil sinon vers l'index
 
-	if(user){
+	/*if(user){
 				return res.json({token: user.generateJWT()});
 			}else{
 				return res.status(401).json(info);
 			}
 		(req, res, next);
-	});
+	});*/
 
 //REGISTER
 	app.post('/register', function(req, res, next){
-		//INSERT DB
-		db.User.insert(
+		//voir https://github.com/LPGroupeChallengeCode/BookLP/blob/test/booklp/routes/index.js sans le token
+		/*db.User.insert(
 		{name : req.body.name},
 		{firstname : req.body.firstname},
 		{mail : req.body.mail},
 		{password : req.body.password})
-		})
+		})*/
