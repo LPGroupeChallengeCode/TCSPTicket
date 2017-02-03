@@ -15,6 +15,18 @@ app.put('/ticket/:id/user', auth, function(req, res, next){
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 //LISTE TICKET
 	app.get('/liste/:id', function(req, res, next){
 		//recup info
