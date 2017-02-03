@@ -18,9 +18,10 @@ var paypal     = require('paypal-rest-sdk');
 //var mongoose = require('mongoose');
 //require('./models/Users');
 //require('./models/Tickets');
+//require('./models/Commandes');
 var app        = express();                 // define our app using express
 
-//mongoose.connect('mongodb://localhost/tcspticketdb');
+//mongoose.connect('mongodb://localhost/billetterietcspdb');
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
