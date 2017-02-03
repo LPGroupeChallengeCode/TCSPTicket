@@ -9,17 +9,18 @@
 // =============================================================================
 
 // call the packages we need
-var express    = require('express');        // call express
-var bodyParser = require('body-parser');
-var md5        = require('md5');
-var nodemailer = require('nodemailer');
+var express       = require('express');        // call express
+var bodyParser    = require('body-parser');
+var md5           = require('md5');
+var nodemailer    = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
-var paypal     = require('paypal-rest-sdk');
-//var mongoose = require('mongoose');
-//require('./models/Users');
-//require('./models/Tickets');
-//require('./models/Commandes');
-var app        = express();                 // define our app using express
+var paypal        = require('paypal-rest-sdk');
+var qr            = require('qr-image');
+var mongoose      = require('mongoose');
+require('./models/Users');
+require('./models/Tickets');
+require('./models/Commandes');
+var app           = express();                 // define our app using express
 
 //mongoose.connect('mongodb://localhost/billetterietcspdb');
 
