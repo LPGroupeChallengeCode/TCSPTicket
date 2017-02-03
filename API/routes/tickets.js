@@ -15,7 +15,7 @@ app.put('/ticket/:id/user', auth, function(req, res, next){
 });
 
 
-//LISTE TICKET
+//LISTE TICKET Liste ??
 	app.get('/liste/:id', function(req, res, next){
 		//recup info
 		Liste.findById({'user.ticket.id': req.params.id}, function(err, listes){
