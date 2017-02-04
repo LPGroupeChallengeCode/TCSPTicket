@@ -22,15 +22,12 @@ require('./models/Tickets');
 require('./models/Commandes');
 var app           = express();                 // define our app using express
 
-//mongoose.connect('mongodb://localhost/billetterietcspdb');
+mongoose.connect('mongodb://localhost/billetterietcspdb');
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-//passport
-//app.use(passport.initialize());
 
 var port = process.env.PORT || 8080;        // set our port
 
