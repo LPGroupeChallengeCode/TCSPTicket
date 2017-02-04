@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	$(function(){
 		$.getJSON(
-			"url api get user by email"+$("#uEmail").text(),
+			"url api get user by id"+$("#uId").text(),
 			function(result) {
 				user = result.map(function(value) {
 					return{

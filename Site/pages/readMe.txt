@@ -1,1 +1,0 @@
-placer toutes les pages du site en .php autre que l'index

@@ -9,6 +9,16 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.navbar-default .navbar-nav>li>a{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-default .navbar-brand{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .layout-boxed html,
 .layout-boxed body {
     height: 100%;
@@ -42,7 +52,7 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background: url("../assets/tcsp.jpg") no-repeat center center scroll;
+    background: url("../assets/header.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -51,22 +61,19 @@ body {
 
 .headline {
     padding: 120px 0;
+    background: rgba(0,0,0,0.3);
 }
 
 .headline h1 {
     font-size: 130px;
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
-    /*background: #fff;*/
-    /*background: rgba(255,255,255,0.2);*/
 }
 
 .headline h2 {
     font-size: 77px;
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
-   /* background: #fff;*/
-    /*background: rgba(255,255,255,0.2);*/
 }
 
 .headline button{
@@ -74,7 +81,7 @@ body {
 }
 
 .featurette-divider {
-    margin: 80px 0;
+    margin: 50px 0;
 }
 
 .featurette {
@@ -96,7 +103,9 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
 }
 
 @media(max-width:1200px) {

@@ -18,6 +18,6 @@ $(document).ready(function(){
 	//fenêtre de saisie mdp oublié
 	$("#mdpOub").click(function(){
 		$("#signInModal").modal('hide');
-		$("#mdpOubModal").modal();
+		$("#mdpModal").modal();
 	});
 });
