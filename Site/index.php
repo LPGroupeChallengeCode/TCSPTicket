@@ -198,11 +198,11 @@ if(isset($_SESSION['session'])){
                 <div class="modal-body" style="padding:40px 50px;">
                     <form role="form" method="post" action="http://localhost:8080/inscription">
                         <div class="form-group">
-                            <label for="prenom"><span class="glyphicon glyphicon-user"></span> First Name</label>
+                            <label for="prenom"><span class="glyphicon glyphicon-user"></span> Prenom</label>
                             <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Entrer votre prénom" required>
                         </div>
                         <div class="form-group">
-                            <label for="nom"><span class="glyphicon glyphicon-user"></span> Last Name</label>
+                            <label for="nom"><span class="glyphicon glyphicon-user"></span> Nom</label>
                             <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrer votre nom" required>
                         </div>
                         <div class="form-group">
@@ -210,7 +210,7 @@ if(isset($_SESSION['session'])){
                             <input type="email" class="form-control" name="email" id="email" placeholder="Entrer votre email" required>
                         </div>
                         <div class="form-group">
-                            <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                            <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Mot de passe</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Entrer votre mot de passe" required>
                         </div>
                         <button type="submit" class="btn btn-success btn-block" id="submitSignUp"><span class="glyphicon glyphicon-check"></span> Inscription</button>

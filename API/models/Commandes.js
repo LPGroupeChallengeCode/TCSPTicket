@@ -4,7 +4,7 @@ var CommandeSchema = new mongoose.Schema({
 	client : {
 		type : mongoose.Schema.Types.ObjectId,
 		ref : 'User'
-	}
+	},
 	tickets : [{
 		nom : String,
 		qty : String,

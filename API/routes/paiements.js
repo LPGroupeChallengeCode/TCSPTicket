@@ -4,8 +4,11 @@ var md5           = require('md5');
 var nodemailer    = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 var paypal        = require('paypal-rest-sdk');
+var http          = require('http');
+var https         = require('https');
 var qr            = require('qr-image');
 var fs            = require('fs');
+var mongoose      = require('mongoose');
 var Ticket        = mongoose.model('Ticket');
 var User          = mongoose.model('User');
 var Commande      = mongoose.model('Commande');
@@ -122,11 +125,35 @@ module.exports = function(app) {
 					res.redirect(redirectUrl);
 
 					//creation commande et push de la commande dans le user
+
+					var t1, t2, t3, t4, t5;
+
 					var commande = new Commande();
 
 					commande.client = req.body.userId;
 					commande.total = req.body.total;
-					//commande.tickets.push(req.body.tickets);
+					//push des tickets
+					if(!req.body.jambedloQty === '0'){
+						t1 = req.body.jambedloQty;
+						commande.tickets.push({nom: "Jambé Dlo" , qty: t1 , pxUnite: "1.80€"});
+					}
+					if (!req.body.boomrangQty === '0') {
+						t2 = req.body.boomrangQty;
+						commande.tickets.push({nom: "Boomrang" , qty: t2 , pxUnite: "3€"});
+					}
+					if(!req.body.beljouninQty === '0'){
+						t3 = req.body.beljouninQty;
+						commande.tickets.push({nom: "Bèl Jounin" , qty: t3 , pxUnite: "3.80€"});
+					}
+					if (!req.body.soleilQty === '0') {
+						t4 = req.body.soleilQty;
+						commande.tickets.push({nom: "Soleil" , qty: t4 , pxUnite: "25€"});
+					}
+					if (!req.body.makadamQty === '0') {
+						t5 = req.body.makadamQty;
+						commande.tickets.push({nom: "Makadam" , qty: t5 , pxUnite: "85€"});
+					}
+
 
 					commande.save(function(err, commande){
 						if(err){console.log(err); return next(err);}
