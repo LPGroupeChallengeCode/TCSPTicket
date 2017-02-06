@@ -123,7 +123,7 @@ if(isset($_SESSION['session'])){
             <div class="featurette" >
                 <img class="featurette-image img-responsive pull-left" style="height: 150px; border-radius: 15px;" src="../assets/Soleil.png">
                 <h2 class="featurette-heading">Soleil
-                    <span class="text-muted">Semiane</span>
+                    <span class="text-muted">Semaine</span>
                 </h2>
                 <p class="lead">Ticket valable pour 7 jours consécutifs de 5h pour le premier jour à 22h30 pour le dernier jour.
                 <br>

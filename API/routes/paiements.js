@@ -125,8 +125,8 @@ module.exports = function(app) {
 					var commande = new Commande();
 
 					commande.client = req.body.userId;
-					commande.tickets = req.body.tickets;
 					commande.total = req.body.total;
+					//commande.tickets.push(req.body.tickets);
 
 					commande.save(function(err, commande){
 						if(err){console.log(err); return next(err);}
@@ -136,7 +136,13 @@ module.exports = function(app) {
 							user.commandes.push(commande);
 							user.save(function(err, user){
 								if(err){console.log(err); return next(err);}
+
+								//creation qrcode avec nom idcommande.png
+								var qr_png = qr.image(commande.tickets, {type : 'png'})
+								qr_png.pipe(fs.createWriteStream('/images/qrcode/'+commande._id+'.png'));
+								qrcode_file = '/images/qrcode/'+commande._id+'.png';
 								
+								/*
 								//recup id derniere commande
 								Commande.findOne().sort('-date').exec(function(err, commande) { 
 									//creation qrcode avec nom idcommande.png
@@ -144,6 +150,7 @@ module.exports = function(app) {
 									qr_png.pipe(fs.createWriteStream('/images/qrcode/'+commande._id+'.png'));
 									qrcode_file = '/images/qrcode/'+commande._id+'.png';
 								});
+								*/
 							});
 						});
 					});

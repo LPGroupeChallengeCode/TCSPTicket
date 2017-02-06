@@ -7,6 +7,10 @@ if(empty($_SESSION['session'])){
 if(isset($_SESSION['session'])){
     $session = $_SESSION['session'];
 }
+elseif(isset($_GET['user'])){
+    $session = $_GET['user'];
+    $_SESSION['session'] = $session;
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr" class="no-js">
@@ -19,7 +23,7 @@ if(isset($_SESSION['session'])){
     <meta name="description" content="Application web qui permet l'achat de titre de transport pour le TCSP Martinique">
     <meta name="author" content="Tropic404Dev">
 
-    <title>Billetterie TCSP Martinique</title>
+    <title>Mon Espace - Billetterie TCSP Martinique</title>
     <link rel="shortcut icon" href="../assets/logo50.png">
 
     <!-- Bootstrap Core CSS -->
@@ -53,46 +57,72 @@ if(isset($_SESSION['session'])){
 </head>
 
 <body class="layout-boxed">
+<p id="uId" style="display: none"><?php echo $session; ?></p>
+    <!-- Navigation -->
+    <?php
+        $_SESSION['page'] = true;
+        include '../include/navbar.php';
+    ?>
 
-    
+	<!-- Modal after first sign up-->
+	<div class="modal fade" id="successSignUp" role="dialog">
+	    <div class="modal-dialog">
+
+	        <!-- Modal content-->
+	        <div class="modal-content">
+	            <div class="modal-header" style="padding:35px 50px;">
+	                <button type="button" class="close" data-dismiss="modal">&times;</button>
+	                <h4><span class="glyphicon glyphicon-pencil"></span> Inscription</h4>
+	            </div>
+	            <div class="modal-body" style="padding:40px 50px;">
+	                <p>Bienvenue sur votre espace personnel ! <br> Un email de confirmation à été envoyé à votre adresse.</p>
+	            </div>
+	        </div>
+
+	    </div>
+	</div>
+	<script>
+	    <?php
+	     if(isset($_GET['firstLogin']) && $_GET['firstLogin'] = 'true' )
+	     {?>
+	        $("#successSignUp").modal();
+	    <?php
+	    }
+	    ?>
+	</script>
 
     <!-- Page Content -->
-    <div class="container wrapper" style="padding-right: 5%; padding-left: 5%;">
+    <div class="container wrapper" style="padding-top: 2%;padding-right: 5%; padding-left: 5%;">
 
-    	<div class="row" style="text-align: center;">
-    			<h1>Billetterie TCSP Matinique</h1>
-    		<span class="col-md-2 text-center"></span>
-    		<div class="col-md-8">
-    			<div class="well well-sm">
-    			<form class="form-horizontal" method="post" action="http://localhost:8080/user/password">
-    					<fieldset>
-    						<legend class="text-center header">Réinitialiser votre mot de passe</legend>
+    	<h2 id="welcome"></h2>
 
-    						<div class="form-group">
-    							<span class="col-md-2 text-center"></span>
-    							<div class="col-md-8">
-    								<input id="email" name="email" type="email" value="<?php echo $_GET['email']; ?>" class="form-control" required readonly="readonly">
-    							</div>
-    						</div>
-
-    						<div class="form-group">
-    							<span class="col-md-2 text-center"></span>
-    							<div class="col-md-8">
-    								<input id="newPassword" name="newPassword" type="password" placeholder="New password" class="form-control" required>
-    							</div>
-    						</div>
-
-    						<div class="form-group">
-    							<span class="col-md-2 text-center"></span>
-    							<div class="col-md-8 text-center">
-    								<button type="submit" id="resetMdp" class="btn btn-primary btn-lg">Reset</button>
-    							</div>
-    						</div>
-    					</fieldset>
-    				</form>
-    			</div>
-    		</div>
+    	<div class="alert alert-info">
+    		Dans votre espace personnel vous pouvez voir l'ensemble de vos commandes passées. <br>
+    		Nous travaillons sur la possibillité de renouveler vos achats, sans repasser par la boutique.
     	</div>
+ 
+ 		<table class="table table-hover col-md-offset-2" style="width: 70%">
+ 			<thead>
+ 				<tr>
+ 					<th>
+ 						N° de Commande
+ 					</th>
+ 					<th>
+ 						Date
+ 					</th>
+ 					<th>
+ 						Tickets
+ 					</th>
+ 					<th>
+ 						Total
+ 					</th>
+ 				</tr>
+ 			</thead>
+ 			<tbody id="history">
+ 				
+ 			</tbody>
+ 			
+ 		</table>
 
         <!-- Footer -->
         <footer>

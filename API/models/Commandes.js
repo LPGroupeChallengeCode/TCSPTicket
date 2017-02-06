@@ -6,8 +6,9 @@ var CommandeSchema = new mongoose.Schema({
 		ref : 'User'
 	}
 	tickets : [{
-		type : mongoose.Schema.Types.ObjectId,
-		ref : 'Ticket'
+		nom : String,
+		qty : String,
+		pxUnite : String
 	}],
 	total : String,
 	date : {

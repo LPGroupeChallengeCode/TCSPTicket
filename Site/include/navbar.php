@@ -44,7 +44,7 @@ if($_SESSION['page'] == true){
 			{
 				?>
 				<li>
-					<a href="profile.php" style="color: #1970bf">Mon Espace</a>
+					<a href="monEspace.php" style="color: #1970bf">Mon Espace</a>
 				</li>
 				<li>
 					<input type="button" id="logout" class="btn btn-danger navbar-btn" value="Sign Out" style="margin-top: 10%"/>
@@ -95,7 +95,7 @@ else
 			{
 				?>
 				<li>
-					<a href="pages/profile.php" style="color: #1970bf">Mon Espace</a>
+					<a href="pages/monEspace.php" style="color: #1970bf">Mon Espace</a>
 				</li>
 				<li>
 					<input type="button" id="logout" class="btn btn-danger navbar-btn" value="Sign Out" style="margin-top: 10%"/>

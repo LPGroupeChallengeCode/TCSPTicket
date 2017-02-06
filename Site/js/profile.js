@@ -1,51 +1,59 @@
 $(document).ready(function(){
 
 	var user;
-	var tickets;
-	var jsonElements = [];
-	var i;
+	var userCommandes;
 	var ticket_details;
 
 	$(function(){
 		$.getJSON(
-			"url api get user by id"+$("#uId").text(),
+			"http://localhost:8080/user/"+$("#uId").text(),
 			function(result) {
 				user = result.map(function(value) {
 					return{
 						'id' : value._id,
 						'prenom' : value.prenom,
 						'nom' : value.nom,
-						'email' : value.email
+						'email' : value.email,
+						'commandes' : value.commandes
 					};
 				});
-				//si il y a le nom de l'utilisateur à ecrire
-				//$("#idDuTexte").append("Phrase " + user[0].prenom + " " + user.[0].nom);
-				getCommandes();
+
+				$("#welcome").append("Bonjour " + user[0].prenom + " " + user.[0].nom + ",");
+				getTickets(user);
 			}
 		);
 	});
 
-	function getCommandes(){
+	function getTickets(user){
 		$.getJSON(
-			"url api get commandes par id utilisateur "+user[0].id,
+			"http://localhost:8080/commande/"+user[0].id,
 			function(result) {
-				commandes = result.map(function(value) {
+				userCommandes = result.map(function(value) {
 					return{
+						'id' : value._id,
 						'tickets' : value.tickets,
 						'total' : value.total,
 						'date' : value.date
 					};
 				});
 				
-				commandes.forEach(function(commande){
-					displayTickets(commandes[i]);
+				userCommandes.forEach(function(commande){
+					displayTickets(commande);
 				});
 			}
 		);
 	}
 
 	function displayTickets(commande){
-		console.log(commande);
+		$("#history").append("<tr>"+
+			"<td>"+ commande._id +"</td>"+
+			"<td>"+ commande.date +"</td>"+
+			"<td>"+ commande.total +"</td>"+
+			"<td>"+ commande.tickets.forEach(function(ticket){
+				ticket.qty + " " + ticket.nom + " unité : " + ticket.pxUnite
+			}) +"</td>"+
+			"</tr>"
+		);
 	}
 
 });

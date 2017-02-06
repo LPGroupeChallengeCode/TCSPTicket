@@ -20,7 +20,7 @@ module.exports = function(app) {
 		user.email = req.body.email;
 		user.password = md5(req.body.password);
 		  
-	 	user.save(function (err){
+	 	user.save(function (err, user){
 			if(err){console.log(err); return next(err);}
 
 			//envoie mail d'incription et redirect vers profil
@@ -50,7 +50,7 @@ module.exports = function(app) {
 				{
 					res.writeHead(302, { 
 
-						'Location': 'localhost:8888/BilletterieTCSP/pages/profile.php?user='+req.body.email+'&firstLogin=true'
+						'Location': 'localhost:8888/BilletterieTCSP/pages/monEspace.php?user='+user._id+'&firstLogin=true'
 					});                    
 
 					res.end();
@@ -74,7 +74,7 @@ module.exports = function(app) {
 				else if(user)
 				{
 					res.writeHead(302, { 
-						'Location': 'http://localhost:8888/BilletterieTCSP/pages/profile.php?user='+user._id
+						'Location': 'http://localhost:8888/BilletterieTCSP/pages/monEspace.php?user='+user._id
 					});                    
 					res.end();
 				}
@@ -83,7 +83,10 @@ module.exports = function(app) {
 
 	//get user par id
 	app.get('/user/:id', function(req, res, next){
-		User.findById(req.params.id, function(err, user){
+		User
+		.findById(req.params.id)
+		.populate('commandes')
+		.exec(function(err, user){
 			if(err){console.log(err); return next(err);}
 			res.json(user);
 		});

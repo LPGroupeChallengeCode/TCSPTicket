@@ -20,7 +20,13 @@ module.exports = function(app) {
 
 	//ajouter ticket
 
-	//ticket par id 
+	//ticket par id
+	app.get('/ticket/:id', function(req, res, next){
+		Ticket.findById(req.params.id, function(err, ticket){
+			if(err){console.log(err); return next(err);}
+			res.json(ticket);
+		});
+	}); 
 
 	//ticket par nom
 	
