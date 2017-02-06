@@ -1,15 +1,15 @@
 <?php
 session_start();
-if(empty($_SESSION['session'])){
-    echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
-    exit();
-}
 if(isset($_SESSION['session'])){
     $session = $_SESSION['session'];
 }
 elseif(isset($_GET['user'])){
     $session = $_GET['user'];
     $_SESSION['session'] = $session;
+}
+if(empty($_SESSION['session'])){
+    echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
+    exit();
 }
 ?>
 <!DOCTYPE html>

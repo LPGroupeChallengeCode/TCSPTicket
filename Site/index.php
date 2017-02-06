@@ -311,7 +311,7 @@ if(isset($_SESSION['session'])){
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="well well-sm">
-                    <form class="form-horizontal" method="post" action="http://192.168.84.160:3000/api/contact">
+                    <form class="form-horizontal" method="post" action="http://localhost:8080/contact">
                         <fieldset>
                             <legend class="text-center header">Contact</legend>
 
