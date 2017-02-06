@@ -1,9 +1,9 @@
 <?php
 session_start();
-/*if(empty($_SESSION['session'])){
+if(empty($_SESSION['session'])){
     echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
     exit();
-}*/
+}
 if(isset($_SESSION['session'])){
     $session = $_SESSION['session'];
 }
@@ -67,53 +67,96 @@ if(isset($_SESSION['session'])){
             <h1>Billetterie en ligne</h1>
         </div>
 
-        <div class="row" style="padding-right: 5%; padding-left: 5%;">
+        <div class="row" style="padding-top: 5%;padding-right: 5%; padding-left: 5%;">
 
-            <form role="form" method="post" action="http://localhost:8080/paypal/paynow">
+            <div class="col-md-7" style="padding-bottom: 5%">
+                <img src="../assets/JambeDlo.png" style="height: 80px; border-radius: 15px;">
+                <label for="jambedlo">Jambé Dlo (Aller simple) - 1.80 &euro;</label>
+                <input type="number" id="jambedlo" value="0" min="0" style="width: 6%; text-align: center;">
+            </div>
 
-                <div class="form-group col-md-7">
-                    <img src="../assets/JambeDlo.png" style="height: 100px; border-radius: 15px;">
-                    <label for="jambedlo">Jambé Dlo (Aller simple) - 1.80 &euro;</label>
-                    <input type="number" id="jambedlo" value="0" min="0" style="width: 5%; text-align: center;">
+            <div class="col-md-offset-2" style="padding-bottom: 5%">
+                <img src="../assets/Boomrang.png" style="height: 80px; border-radius: 15px;">
+                <label for="boomrang">Boomrang (Aller - Retour) - 3 &euro;</label>
+                <input type="number" id="boomrang" value="0" min="0" style="width: 6%; text-align: center;">
+            </div>
+
+            <div class=" col-md-7" style="padding-bottom: 5%">
+                <img src="../assets/BelJounin.png" style="height: 80px; border-radius: 15px;">
+                <label for="beljounin">Bèl Jounin (Journée) - 3.80 &euro;</label>
+                <input type="number" id="beljounin" value="0" min="0" style="width: 6%; text-align: center;">
+            </div>
+
+            <div class=" col-md-offset-2" style="padding-bottom: 5%">
+                <img src="../assets/Soleil.png" style="height: 80px; border-radius: 15px;">
+                <label for="soleil">Soleil (Semaine) - 25 &euro;</label>
+                <input type="number" id="soleil" value="0" min="0" style="width: 6%; text-align: center;">
+            </div>
+
+            <div class=" col-md-7" style="padding-bottom: 5%">
+                <img src="../assets/Makadam.png" style="height: 80px; border-radius: 15px;">
+                <label for="makadam">Makadam (Mois) - 85 &euro;</label>
+                <input type="number" id="makadam" value="0" min="0" style="width: 6%; text-align: center;">
+            </div>
+
+            <button class="btn btn-success" id="submitBuy" onclick="buyMod()"><span class="glyphicon glyphicon-shopping-cart"></span> Acheter</button>
+        </div>
+
+        <!-- Modal Buy -->
+        <div class="modal fade" id="buyModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-shopping-cart"></span> Acheter</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" method="post" action="http://localhost:8080/paypal/paynow">
+                            <div class="form-group">
+                                <label for="jambedloQty"><span></span> Jambé Dlo</label>
+                                <input type="text" class="form-control" name="jambedloQty" id="jambedloQty" readonly="readonly"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="boomrangQty"><span></span> Boomrang</label>
+                                <input type="text" class="form-control" name="boomrangQty" id="boomrangQty" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" class="form-control" name="departure" id="departure">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="beljouninQty"><span></span> Bèl Jounin</label>
+                                <input type="text" class="form-control" name="beljouninQty" id="beljouninQty" readonly="readonly">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="soleilQty"><span></span> Soleil</label>
+                                <input type="text" class="form-control" name="soleilQty" id="soleilQty" readonly="readonly">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="makadamQty"><span></span> Makadam</label>
+                                <input type="text" class="form-control" name="makadamQty" id="makadamQty" readonly="readonly">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="total"><span></span> Total</label>
+                                <input type="text" class="form-control" name="total" id="total" readonly="readonly">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="hidden" class="form-control" name="userId" id="userId">
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-block" id="submitBuy"><span class="glyphicon glyphicon-shopping-cart"></span> Acheter</button>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="form-group col-md-offset-2">
-                    <img src="../assets/Boomrang.png" style="height: 100px; border-radius: 15px;">
-                    <label for="boomrang">Boomrang (Aller - Retour) - 3 &euro;</label>
-                    <input type="number" id="boomrang" value="0" min="0" style="width: 5%; text-align: center;">
-                </div>
-
-                <div class="form-group col-md-7">
-                    <img src="../assets/BelJounin.png" style="height: 100px; border-radius: 15px;">
-                    <label for="beljounin">Bèl Jounin (Journée) - 3.80 &euro;</label>
-                    <input type="number" id="beljounin" value="0" min="0" style="width: 5%; text-align: center;">
-                </div>
-
-                <div class="form-group col-md-offset-2">
-                    <img src="../assets/Soleil.png" style="height: 100px; border-radius: 15px;">
-                    <label for="soleil">Soleil (Semaine) - 25 &euro;</label>
-                    <input type="number" id="soleil" value="0" min="0" style="width: 5%; text-align: center;">
-                </div>
-
-                <div class="form-group col-md-7">
-                    <img src="../assets/Makadam.png" style="height: 100px; border-radius: 15px;">
-                    <label for="makadam">Makadam (Mois) - 85 &euro;</label>
-                    <input type="number" id="makadam" value="0" min="0" style="width: 5%; text-align: center;">
-                </div>
-
-                <div class="form-group col-md-offset-2">
-                    
-                    <label for="total">Total : </label>
-                    <input type="number" id="total" value="0" min="0" style="width: 10%; text-align: center;" readonly="">
-                </div>
-
-                <div class="form-group">
-                    <input type="hidden" class="form-control" name="userId" id="userId">
-                </div>
-
-                <button type="submit" class="btn btn-success" id="submitBuy"><span class="glyphicon glyphicon-shopping-cart"></span> Acheter</button>
-            </form>
-
+            </div>
         </div>
 
         <!-- Footer -->
@@ -127,6 +170,27 @@ if(isset($_SESSION['session'])){
 
     </div>
     <!-- /.container -->
+
+    <script type="text/javascript">
+        function buyMod(){
+            setModal();
+            $("#buyModal").modal();
+        }
+
+        function setModal(){
+            $("#jambedloQty").val($("#jambedlo").val());
+            $("#boomrangQty").val($("#boomrang").val());
+            $("#beljouninQty").val($("#beljounin").val());
+            $("#soleilQty").val($("#soleil").val());
+            $("#makadamQty").val($("#makadam").val());
+            $("#userId").val("<?php echo $_SESSION['session']?>");
+            setTotal();
+        }
+
+        function setTotal(){
+            $("#total").val((1.80 * $("#jambedloQty").val()) + (3 * $("#boomrangQty").val()) + (3.80 * $("#beljouninQty").val()) + (25 * $("#soleilQty").val()) + (85 * $("#makadamQty").val()));
+        }
+    </script>
 
 </body>
 
