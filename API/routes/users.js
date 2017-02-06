@@ -109,16 +109,12 @@ module.exports = function(app) {
 
 	//update mot de passe
 	app.post('/user/password', function(req, res){
-		User.find({ email: req.body.email }, function(err, user){
+		User.update({ email: req.body.email }, {password : md5(req.body.newPassword)}, function(err, numberAffected, rawResponse){
 			if(err){console.log(err); return next(err);}
-			user.password = md5(req.body.newPassword);
-			user.save(function(err, user){
-				if(err){console.log(err); return next(err);}
-				res.writeHead(302, { 
-					'Location': 'http://localhost:8888/BilletterieTCSP/index.php'
-				});                  
-				res.end();
-			});
+			res.writeHead(302, { 
+				'Location': 'http://localhost:8888/BilletterieTCSP/index.php'
+			});                  
+			res.end();			
 		});
 	});
 }
