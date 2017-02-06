@@ -18,7 +18,7 @@ $(document).ready(function(){
 					};
 				});
 
-				$("#welcome").append("Bonjour " + user[0].prenom + " " + user.[0].nom + ",");
+				$("#welcome").append("Bonjour " + user.prenom + " " + user.nom + ",");
 				getTickets(user);
 			}
 		);

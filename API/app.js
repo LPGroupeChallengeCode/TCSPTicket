@@ -22,6 +22,7 @@ require('./models/Tickets');
 require('./models/Commandes');
 var app           = express();                 // define our app using express
 
+mongoose.Promise  = require ('bluebird');
 mongoose.connect('mongodb://localhost/billetterietcspdb');
 
 // configure app to use bodyParser()
@@ -34,6 +35,25 @@ var port = process.env.PORT || 8080;        // set our port
 // ROUTES FOR OUR API
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
+
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
@@ -57,5 +77,6 @@ require('./routes')(app); //va chercher les routes dans le dossier routes
 
 // START THE SERVER
 // =============================================================================
-app.listen(port);
-console.log('Api working on port ' + port);
+app.listen(port, '0.0.0.0', function(){
+	console.log('Api working on port ' + port);
+});

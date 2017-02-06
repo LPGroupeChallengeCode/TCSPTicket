@@ -277,7 +277,7 @@ if(isset($_SESSION['session'])){
                 <span class="text-muted">Des tickets pour tous les besoins</span>
             </h2>
             <p class="lead">Retrouvez dans la billetterie les tickets disponibles. De l'aller simple au pass pour un mois, profitez de prix plus avantageux que ceux proposés en station.</p>
-            <a class="btn btn-success" href="">Voir les tickets</a>
+            <a class="btn btn-success" href="pages/boutique.php">Voir les tickets</a>
         </div>
 
         <hr class="featurette-divider">
@@ -289,7 +289,7 @@ if(isset($_SESSION['session'])){
                 <span class="text-muted">Retrouvez les horaires et stations du TCSP</span>
             </h2>
             <p class="lead">Plus besoin d'aller en station pour connaître les horaires et lignes, consulter les plages horraires à tout moment.</p>
-            <a class="btn btn-success pull-right" href="">Lignes et Horaires</a>
+            <a class="btn btn-success pull-right" href="pages/lignesEtHoraires.php">Lignes et Horaires</a>
         </div>
 
         <hr class="featurette-divider">
