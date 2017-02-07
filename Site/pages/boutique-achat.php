@@ -1,11 +1,12 @@
 <?php
 session_start();
+
+if(isset($_SESSION['session'])){
+    $session = $_SESSION['session'];
+}
 if(empty($_SESSION['session'])){
     echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
     exit();
-}
-if(isset($_SESSION['session'])){
-    $session = $_SESSION['session'];
 }
 ?>
 <!DOCTYPE html>
