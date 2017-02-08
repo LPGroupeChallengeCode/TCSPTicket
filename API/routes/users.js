@@ -6,6 +6,7 @@ var smtpTransport = require('nodemailer-smtp-transport');
 var paypal        = require('paypal-rest-sdk');
 var qr            = require('qr-image');
 var mongoose      = require('mongoose');
+mongoose.Promise  = require ('bluebird');
 var User          = mongoose.model('User');
 
 module.exports = function(app) {
@@ -53,10 +54,11 @@ module.exports = function(app) {
 				}
 				else
 				{
-					res.writeHead(302, { 
+					res.redirect('http://localhost:8888/BilletterieTCSP/pages/monEspace.php?user='+user._id+'&firstLogin=true');   
+					/*res.writeHead(302, { 
 
 						'Location': 'localhost:8888/BilletterieTCSP/pages/monEspace.php?user='+user._id+'&firstLogin=true'
-					});                    
+					});    */                
 
 					res.end();
 				}
@@ -72,6 +74,7 @@ module.exports = function(app) {
 
 				if(!user)
 				{
+					//res.redirect('http://localhost:8888/BilletterieTCSP/index.php?errorLogin=true');   
 					res.writeHead(302, { 
 						'Location': 'http://localhost:8888/BilletterieTCSP/index.php?errorLogin=true'
 					});                   
@@ -79,10 +82,10 @@ module.exports = function(app) {
 				}
 				else if(user)
 				{
-					console.log("ok");
-					res.writeHead(302, { 
+					res.redirect('http://localhost:8888/BilletterieTCSP/pages/monEspace.php?user='+user._id);   
+					/*res.writeHead(302, { 
 						'Location': 'http://localhost:8888/BilletterieTCSP/pages/monEspace.php?user='+user._id
-					});                  
+					});        */          
 					res.end();
 				}
 		});
@@ -111,9 +114,10 @@ module.exports = function(app) {
 	app.post('/user/password', function(req, res){
 		User.update({ email: req.body.email }, {password : md5(req.body.newPassword)}, function(err, numberAffected, rawResponse){
 			if(err){console.log(err); return next(err);}
-			res.writeHead(302, { 
+			res.redirect('http://localhost:8888/BilletterieTCSP/index.php');
+			/*res.writeHead(302, { 
 				'Location': 'http://localhost:8888/BilletterieTCSP/index.php'
-			});                  
+			});      */            
 			res.end();			
 		});
 	});

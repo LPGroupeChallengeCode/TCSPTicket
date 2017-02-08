@@ -36,9 +36,10 @@ module.exports = function(app) {
 			}
 			else
 			{
-				res.writeHead(302, { 
-					'Location': 'localhost:8888/BilletterieTCSP/index.php'
-				});                    
+				res.redirect('http://localhost:8888/BilletterieTCSP/index.php?mailSended=true');    
+				/*res.writeHead(302, { 
+					'Location': 'localhost:8888/BilletterieTCSP/index.php?mailSended=true'
+				});   */                 
 				res.end();
 			}
 		});
@@ -71,9 +72,10 @@ module.exports = function(app) {
 			}
 			else
 			{
-				res.writeHead(302, { 
+				res.redirect('http://localhost:8888/BilletterieTCSP/index.php?resetMdp=true');  
+				/*res.writeHead(302, { 
 					'Location': 'localhost:8888/BilletterieTCSP/index.php?resetMdp=true'
-				});                    
+				});  */                  
 
 				res.end();
 			}

@@ -220,7 +220,9 @@ if(isset($_SESSION['session'])){
 
         </div>
     </div>
-
+    <script>
+        
+    </script>
     <!-- Modal Payement -->
     <div class="modal fade" id="paymentModal" role="dialog">
         <div class="modal-dialog">
@@ -265,7 +267,6 @@ if(isset($_SESSION['session'])){
                 
                 <p>Avec la billeterie en ligne, achetez vos titres de transport partout et à tout moment.</p>
             </div>
-
         </div>
 
         <hr class="featurette-divider">
@@ -371,12 +372,21 @@ if(isset($_SESSION['session'])){
                         <h4><span class="glyphicon glyphicon-envelope"></span> Contact</h4>
                     </div>
                     <div class="modal-body" style="padding:40px 50px;">
-                        <p>Thank you for contacting us. We will get back to you as soon as possible !</p>
+                        <p>VOtre mail a été envoyé, nous reviendrons vers vous dans les plus brefs delais !</p>
                     </div>
                 </div>
 
             </div>
         </div>
+        <script>
+            <?php
+             if(isset($_GET['mailSended']) && $_GET['mailSended'] = 'true' )
+             {?>
+            $("#mailSended").modal();
+            <?php
+            }
+            ?>
+        </script>
 
         <style>
             .header {

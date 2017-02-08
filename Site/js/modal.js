@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 	//message apres envoi mail
 	$("#send").click(function(){
-		$("#mailModal").modal();
+		$("#mailSended").modal();
 	});
 
 	//fenêtre de saisie mdp oublié

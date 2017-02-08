@@ -152,6 +152,66 @@ if(empty($_SESSION['session'])){
                                 <input type="hidden" class="form-control" name="userId" id="userId">
                             </div>
 
+                            <hr>
+
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label class="control-label"  for="username">Nom du propriétaire de la carte</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <!-- Card Number -->
+                            <div class="form-group">
+                                <label class="control-label" for="email">Numéro de carte</label>
+                                <div class="controls">
+                                  <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <!-- Expiry-->
+                            <div class="form-group">
+                                <label class="control-label" for="password">Date d'expiration</label>
+                                <div class="controls">
+                                    <select class="input-small">
+                                        <option value="01">Jan (01)</option>
+                                        <option value="02">Fev (02)</option>
+                                        <option value="03">Mar (03)</option>
+                                        <option value="04">Avr (04)</option>
+                                        <option value="05">Mai (05)</option>
+                                        <option value="06">Juin (06)</option>
+                                        <option value="07">Juil (07)</option>
+                                        <option value="08">Aout (08)</option>
+                                        <option value="09">Sep (09)</option>
+                                        <option value="10">Oct (10)</option>
+                                        <option value="11">Nov (11)</option>
+                                        <option value="12">Dec (12)</option>
+                                    </select>
+                                    <select class="input-small">
+                                        <option value="17">2017</option>
+                                        <option value="18">2018</option>
+                                        <option value="19">2019</option>
+                                        <option value="20">2020</option>
+                                        <option value="21">2021</option>
+                                        <option value="22">2022</option>
+                                        <option value="23">2023</option>
+                                        <option value="23">2024</option>
+                                        <option value="23">2025</option>
+                                        <option value="23">2026</option>
+                                        <option value="23">2027</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- CVV -->
+                            <div class="form-group">
+                                <label class="control-label"  for="password_confirm">Cryptogramme</label>
+                                <div class="controls">
+                                  <input type="password" class="form-control" required>
+                                </div>
+                            </div>
+
                             <button type="submit" class="btn btn-success btn-block" id="submitBuy"><span class="glyphicon glyphicon-shopping-cart"></span> Acheter</button>
                         </form>
                     </div>
