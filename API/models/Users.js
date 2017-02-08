@@ -8,9 +8,9 @@ var UserSchema = new mongoose.Schema({
 		unique: true
 	},
 	password: String,
-	firstName: String,
 	commandes : [{
-		tickets : 
+		type : mongoose.Schema.Types.ObjectId,
+		ref : 'Commande'
 	}]
 });
 

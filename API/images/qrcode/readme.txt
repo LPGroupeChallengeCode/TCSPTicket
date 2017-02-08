@@ -1,0 +1,1 @@
+Dossier permettant de stocker les qrcode générés
