@@ -297,7 +297,7 @@ if(isset($_SESSION['session'])){
 
         <!-- Third Featurette -->
         <div class="featurette" >
-            <img class="featurette-image img-responsive pull-right" style="height: 250px;" src="assets/phone.jpg">
+            <img class="featurette-image img-responsive pull-right" style="height: 250px;" src="assets/phone.png">
             <h2 class="featurette-heading">La billeterie accessible partout...
                 <span class="text-muted">Et même sur mobile.</span>
             </h2>
