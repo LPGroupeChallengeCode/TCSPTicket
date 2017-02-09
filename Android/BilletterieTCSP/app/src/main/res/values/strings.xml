@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">BilletterieTCSP</string>
+    <string name="mail">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="connexion">Connexion</string>
+    <string name="newAccount">S\'inscire</string>
+    <string name="inscription">Inscription</string>
+</resources>
