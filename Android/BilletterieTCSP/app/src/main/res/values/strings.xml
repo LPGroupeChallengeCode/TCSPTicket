@@ -5,4 +5,8 @@
     <string name="connexion">Connexion</string>
     <string name="newAccount">S\'inscire</string>
     <string name="inscription">Inscription</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prénom</string>
+    <string name="erreurLogin">Email ou Mot de passe incorrect</string>
+    <string name="mailInscription">Un email vous a été envoyé</string>
 </resources>

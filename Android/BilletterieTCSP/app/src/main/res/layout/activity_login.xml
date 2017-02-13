@@ -63,16 +63,16 @@
         android:layout_below="@+id/mdpInput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:id="@+id/button2" />
+        android:id="@+id/loginButton" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/newAccount"
-        android:id="@+id/button"
+        android:id="@+id/registerButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button2"
+        android:layout_alignStart="@+id/loginButton"
         android:layout_marginBottom="29dp" />
 
     <EditText
@@ -92,7 +92,6 @@
         android:inputType="textPassword"
         android:ems="15"
         android:id="@+id/mdpInput"
-        android:singleLine="false"
         android:selectAllOnFocus="false"
         android:background="@android:drawable/alert_light_frame"
         android:layout_below="@+id/mdpLabel"
