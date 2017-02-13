@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="16f54ec0d8276e48fd91fdefcf72e8e5470c46de">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_dd1e51686c26cff7299136cf215af98575d927d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_f8f4a9ec2094d1072e708401cfd4dc221202952e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.1_d7b284541a4389df6dc5d521708a53e5d9bf347d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_c6fe60f6530e606e63adce1dc2f71641de560401/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f3a09e5e41c16f8c8f5c7f1c6d98e85be5d5046f">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_315cfb7884816cf400d969e362e1cd976767c7a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_ab46998105c9ef963768576998c825c31c8478b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_8815936a9397dda18704e94b604643fff0edc751/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_0b1a313ba4a03a9c8927df40625b63f1098344bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_f9179c0564c6429bd03c0713a973e304cd1a9636/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_cf1413cd4f9d5165ec6fcb8c3475237e90d76a20/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_f1435403bb7ddc864d99eea5bf566e3d383d7ef5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.1_968af7254bfdea2def7138a89401f48f1ac0bfc9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_156fa0ab494fb51b84a129eca802c0f26533306d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_579cb981da97544cd9b52227bb641fa178b0aa24/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_bc0986cb163363332d963b3c9dedd038505a193d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.1_9ad97e8a6d227caee814dc831e3d349c9214bcdd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_a74a350d147afc2326b2b1d3bd5e63452b63ba01/classes.dex" />
+    </item>
+
+</items>

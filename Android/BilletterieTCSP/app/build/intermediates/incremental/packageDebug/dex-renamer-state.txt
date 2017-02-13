@@ -1,0 +1,7 @@
+#Thu Feb 09 09:30:51 AST 2017
+base.0=/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_315cfb7884816cf400d969e362e1cd976767c7a2
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_dd1e51686c26cff7299136cf215af98575d927d7/classes.dex
+base.1=/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_dd1e51686c26cff7299136cf215af98575d927d7
+file.0=/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_315cfb7884816cf400d969e362e1cd976767c7a2/classes.dex

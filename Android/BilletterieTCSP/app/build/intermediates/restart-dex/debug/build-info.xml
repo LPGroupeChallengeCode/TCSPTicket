@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="283093976051627"
+    token="188922461055008978"
+    verifier="R_CLASS_CHANGE" >
+
+    <task
+        name="javac"
+        duration="275" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="26" />
+    <task
+        name="verifier"
+        duration="3" />
+
+    <artifact
+        location="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="279652674965125"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="282875224453102"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="283093976051627"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/Oriane/Documents/LP3IEM/ProjetTut/TCSPTicket/Android/BilletterieTCSP/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>
